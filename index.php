@@ -18,7 +18,7 @@
 <main>
 <h2>Practice</h2>
 <pre>
-<?php phpinfo(); ?>
+<?php ?>
 </pre>
 </main>
 </body>    
