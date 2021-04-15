@@ -33,3 +33,18 @@ PRIMARYキー 一番大切なキーとして扱われる    重複したidの内
 
 Auto Increment 自動的に連番で入れてくれる
 A_IがAuto Increment
+
+一度削除したidは使わない
+
+データが入っている場合型を変更することはできない
+
+SELECT * FROM my_items WHERE id=2   WHEREの次に条件を書いて、特定のデータを取得する
+
+
+SELECT * FROM makers, my_items WHERE makers.id=my_items.maker_id   ディレイションを貼りたテーブルをカンマでつなげる
+                                        ↑ディレイションを貼っている条件
+
+
+SELECT * FROM my_items ORDER BY id ASC  並び替え ASC(昇順 省略できる)  DESC(降順)
+
+SELECT item_name, SUM(COUNT) FROM my_items LEFT JOIN carts ON my_items.id=carts.item_id GROUP BY carts.item_id  LEFTで外部とつなげることができる
